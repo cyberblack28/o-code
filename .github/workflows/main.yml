@@ -24,7 +24,7 @@ jobs:
       - name: Run dockle
         uses: hands-lab/dockle-action@v1
         with:
-          image: docker.pkg.github.com/${{ github.repository }}/gitops-go-app:${{ github.run_number }}
+          image: kix.ocir.io/orasejapan/yutichik/gitops-go-app:${{ github.run_number }}
 
         # Trivyによるイメージスキャン
       - name: Run Trivy vulnerability scanner
