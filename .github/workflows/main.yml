@@ -65,8 +65,8 @@ jobs:
           git branch feature/${{ github.run_number }}
           git checkout feature/${{ github.run_number }}
           # values.yamlのタグ番号を更新
-          sed -i 's/tag: [0-9]*/tag: ${{ github.run_number }}/g' values.yaml
-          #sed -i 's/tag: [0-9]*/tag: latest/g' values.yaml
+          #sed -i 's/tag: [0-9]*/tag: ${{ github.run_number }}/g' values.yaml
+          sed -i 's/tag: [0-9]*/tag: latest/g' values.yaml
           # プッシュ処理
           git add values.yaml
           git commit -m "Update tag ${{ github.run_number }}"
